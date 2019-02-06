@@ -1,0 +1,17 @@
+#hoverable-link:hover{
+    color:red;
+    text-decoration: none;
+}
+ul{
+    text-decoration: underline;
+}
+#aleksirow{
+    font-weight: bold;
+    background-color:hotpink;
+}
+.list{
+    position:absolute;
+    height:200px;
+    width:100%;
+    background-color: hotpink;
+}
