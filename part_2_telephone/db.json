@@ -1,0 +1,24 @@
+{
+  "persons": [
+    {
+      "name": "Martti Tienari",
+      "number": "040-123456",
+      "id": 2
+    },
+    {
+      "name": "Lea Kutvonen",
+      "number": "040-123456",
+      "id": 4
+    },
+    {
+      "name": "Petro Silenius",
+      "number": "1010235",
+      "id": 6
+    },
+    {
+      "name": "Petri Holopainen",
+      "number": "0123456",
+      "id": 7
+    }
+  ]
+}
