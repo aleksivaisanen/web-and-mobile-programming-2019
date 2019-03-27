@@ -53,8 +53,9 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('http://localhost:3001/persons')
+    axios.get('http://localhost:3001/api/persons')
       .then(res => {
+        console.log(res.data)
         this.setState({
           persons: res.data
         })
@@ -70,15 +71,14 @@ class App extends Component {
     event.preventDefault();
     if (this.state.persons.filter(person => person.name === this.state.newName).length > 0) {
       alert("Tämä henkilö löytyy jo luettelosta!");
-    }else if(this.state.newName === "" || this.state.newNum === ""){
+    } else if (this.state.newName === "" || this.state.newNum === "") {
       alert("Kentät eivät voi olla tyhjiä!")
-    } 
+    }
     else {
       //setting the new id to current date in milliseconds + the length of the array to avoid overlapping if old entries are removed
-      axios.post('http://localhost:3001/persons', {
+      axios.post('http://localhost:3001/api/persons', {
         name: this.state.newName,
         number: this.state.newNum,
-        id: (new Date()).getTime() + this.state.persons.lengths
       }).then(res => {
         this.setState({
           persons: [...this.state.persons, res.data],
@@ -92,8 +92,9 @@ class App extends Component {
 
   handleRemove = (id) => {
     const currentPerson = this.state.persons.find(person => person.id === id);
+    console.log(id)
     if (window.confirm('Poistetaanko ' + currentPerson.name + '?')) {
-      axios.delete('http://localhost:3001/persons/' + id)
+      axios.delete('http://localhost:3001/api/persons/' + id)
         .then(res => {
           const oldPersons = [...this.state.persons];
           const index = oldPersons.indexOf(currentPerson);

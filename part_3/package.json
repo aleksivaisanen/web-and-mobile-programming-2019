@@ -1,0 +1,29 @@
+{
+  "name": "part_3",
+  "version": "1.0.0",
+  "description": "University of Turku",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksivaisanen/web-and-mobile-programming-2019.git"
+  },
+  "author": "Aleksi Väisänen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksivaisanen/web-and-mobile-programming-2019/issues"
+  },
+  "homepage": "https://github.com/aleksivaisanen/web-and-mobile-programming-2019#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
